@@ -49,4 +49,8 @@ class AddressBook
         
         return nil
     end
+    
+    def destroy
+        @entries = []
+    end
 end
