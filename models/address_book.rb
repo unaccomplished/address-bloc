@@ -19,6 +19,6 @@ class AddressBook
     end
     
     def remove_entry(name, phone_number, email)
-        entries.delete_if { |entry| entry.email == email }
+        entries.delete_if { |entry| entry.name == name && entry.phone_number = phone_number && entry.email == email }
     end
 end
