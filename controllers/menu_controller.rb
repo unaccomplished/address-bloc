@@ -110,7 +110,7 @@ class MenuController
        entry_num = gets.to_i
        puts entry_num
        address_book.entries.each_with_index do |entry, index| 
-        if entry_num == index
+        if entry_num == index + 1
             puts entry.to_s
             main_menu
         else
