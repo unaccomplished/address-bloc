@@ -108,15 +108,13 @@ class MenuController
    def view_entry_number
        print "Enter Entry Number: "
        entry_num = gets.to_i
-       puts entry_num
-       address_book.entries.each_with_index do |entry, index| 
-        if entry_num == index + 1
-            puts entry.to_s
+
+       if entry_num < address_book.entries.count
+            puts address_book.entries[entry_num]
             main_menu
-        else
+       else
             puts "Invalid number, please try again"
             view_entry_number
-        end
        end
    end
    
